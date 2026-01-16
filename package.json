@@ -1,0 +1,36 @@
+{
+  "name": "todo-list-app",
+  "version": "1.0.0",
+  "description": "A beautiful cross-platform to-do list desktop application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "package": "electron-packager . todo-list --platform=win32 --arch=x64 --out=dist --overwrite"
+  },
+  "keywords": [
+    "todo",
+    "electron",
+    "desktop"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^40.0.0",
+    "electron-builder": "^26.4.0",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.todolist.app",
+    "productName": "ToDo List",
+    "win": {
+      "target": "portable"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "styles.css",
+      "renderer.js"
+    ]
+  }
+}
