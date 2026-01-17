@@ -35,3 +35,13 @@ desktop.ini
 # Temporary files
 *.tmp
 *.temp
+
+# Android/Capacitor
+android/app/build/
+android/.gradle/
+android/local.properties
+android/.idea/
+android/app/app.iml
+android/build/
+android/captures/
+.gradle/

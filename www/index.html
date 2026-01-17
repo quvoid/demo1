@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List - Stay Organized</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container dashboard-container">
+        <header class="header">
+            <h1 class="title">
+                <span class="icon">✓</span>
+                My Goals
+            </h1>
+            <p class="subtitle">Stay focused on your short and long term vision</p>
+        </header>
+
+        <div class="input-section">
+            <select id="taskType" class="task-type-select">
+                <option value="daily">Daily Goal</option>
+                <option value="monthly">Monthly Goal</option>
+                <option value="general">General Task</option>
+            </select>
+            <input type="text" id="taskInput" class="task-input" placeholder="What do you want to achieve?"
+                autocomplete="off" />
+            <button id="addBtn" class="add-btn">
+                <span class="btn-icon">+</span>
+            </button>
+        </div>
+
+        <div class="dashboard-grid">
+            <!-- Daily Goals Column -->
+            <div class="dashboard-col daily-col">
+                <div class="col-header">
+                    <h2>☀️ Daily Goals</h2>
+                    <span class="count-badge" id="dailyCount">0</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="dailyProgress"></div>
+                </div>
+                <ul id="dailyList" class="task-list"></ul>
+                <div class="empty-state-small" id="dailyEmpty">
+                    No daily goals set
+                </div>
+            </div>
+
+            <!-- Monthly Goals Column -->
+            <div class="dashboard-col monthly-col">
+                <div class="col-header">
+                    <h2>📅 Monthly Goals</h2>
+                    <span class="count-badge" id="monthlyCount">0</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="monthlyProgress"></div>
+                </div>
+                <ul id="monthlyList" class="task-list"></ul>
+                <div class="empty-state-small" id="monthlyEmpty">
+                    No monthly goals set
+                </div>
+            </div>
+
+            <!-- General Tasks/Roadmap Column -->
+            <div class="dashboard-col general-col">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="general">Tasks</button>
+                    <button class="tab-btn" data-tab="roadmap">Roadmap</button>
+                </div>
+
+                <div id="generalTab" class="tab-content active">
+                    <ul id="generalList" class="task-list"></ul>
+                    <div class="empty-state-small" id="generalEmpty">
+                        No pending tasks
+                    </div>
+                </div>
+
+                <div id="roadmapTab" class="tab-content roadmap-content">
+                    <h3>🚀 Future Features</h3>
+                    <ul class="roadmap-list">
+                        <li>🔄 Recurring Tasks</li>
+                        <li>🔔 Push Notifications</li>
+                        <li>📅 Calendar View</li>
+                        <li>⏱️ Pomodoro Timer</li>
+                        <li>🏷️ Custom Categories</li>
+                        <li>💾 Data Backup</li>
+                        <li>🎨 Custom Themes</li>
+                        <li>🖱️ Drag & Drop</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>
